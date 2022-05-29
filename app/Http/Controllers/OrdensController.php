@@ -22,7 +22,7 @@ class OrdensController extends Controller
         Paginator::useBootstrap(); //utilização do paginator.
 
 
-        return view('ordem\ordens', compact('ordens')); //retorna a tela com as ordens do sistema.
+        return view('ordem.ordens', compact('ordens')); //retorna a tela com as ordens do sistema.
     }
 
     public function filtroOrdens(Request $request)

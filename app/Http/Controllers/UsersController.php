@@ -18,7 +18,7 @@ class UsersController extends Controller
 
     
     public function index()
-    {
+    {        
         $usuarios = User::paginate(10); //confiração do paginate para exibir apenas 10 itens por página.
         Paginator::useBootstrap(); //utilização do paginator.
         return view('usuario.lista', compact('usuarios')); //retorna a tela com os usuários do sistema.
