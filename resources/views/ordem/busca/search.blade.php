@@ -51,7 +51,6 @@
                                 <h5>{{ $ordem->relatorio }}</h5>
                             </div>
                         </div>
-                        <hr />
                         <div class="card ordemdiv">
                             @if($ordem->status_ordem != 'Pronto')
                             {!! Form::open(['method'=>'POST', 'url'=>'email']) !!}
@@ -67,7 +66,7 @@
                             {!! Form::close() !!}
                             @endif
                         </div>
-                        <hr />
+                        <br />
                         <a href="{{ url('/') }}" class="btn btn-primary btn-success float-right"><i class="fas fa-undo-alt"></i> Voltar ao menu</a>                                               
                     </div>
                 @endforeach

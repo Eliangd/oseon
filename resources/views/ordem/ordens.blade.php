@@ -54,12 +54,16 @@
                                         <td>{{ $ordem->nome }}</td>
                                         <td>{{ $ordem->cpf }}</td>
                                         <td>{{ $ordem->status_ordem }}</td>                            
-                                        <td>
+                                        <td>                    
+                                            <form style=display:inline action="search" method="GET" class="form form-inline">
+                                                <input hidden id="search" name="search" value={{ $ordem->protocolo }} >
+                                                <button type="submit" class="btn btn-info btn-sm"><i class="fas fa-search"></i> Vizualizar</button>
+                                            </form>
                                             {!! Form::open(['method'=>'DELETE', 'url'=>'ordem/'.$ordem->id, 'style'=>'display:inline']) !!}
                                                 <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</button>
                                             {!! Form::close() !!}
                                             @if($ordem->status_ordem != 'Pronto')
-                                                <a href="{{ url('ordem/'.$ordem->id) }}" class="btn btn-primary btn-sm"><i class="fas fa-pen"></i> Detalhes</a>
+                                                <a href="{{ url('ordem/'.$ordem->id) }}" class="btn btn-primary btn-sm"><i class="fas fa-pen"></i> Editar</a>
                                             @endif
                                         </td>
                                     </tr>
