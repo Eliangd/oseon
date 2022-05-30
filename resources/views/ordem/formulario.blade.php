@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header text-center">
-                    Ordens
+                <div class="card-header divAlinhar">
+                    <h4>Ordens:</h4>
                     <a href="{{ url('ordem') }}" class="btn btn-success btn-sm float-right"><i class="fas fa-list"></i> Listar Ordens</a>
                 </div>
 

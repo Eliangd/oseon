@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">
-                    Cadastro de Usuários:
+                <div class="card-header divAlinhar">
+                    <h4>Cadastro de Usuários:</h4>
                     <a href="{{ url('usuario') }}" class="btn btn-success float-right"><i class="fas fa-list"></i> Listar Usuários</a>
                 </div>
 
@@ -20,14 +20,22 @@
                     @else
                         {!! Form::open(['method'=> 'POST', 'url'=>'usuario'])  !!}
                     @endif
-                    {!! Form::label('name', 'Nome:') !!}
-                    {!! Form::input('text', 'name', null, ['class'=>'form-control', 'autofocus', 'placeholder'=>'Nome', 'required']) !!}
-                    {!! Form::label('email', 'E-mail:') !!}
-                    {!! Form::input('email', 'email', null, ['class'=>'form-control', 'placeholder'=>'E-mail', 'required']) !!}
-                    {!! Form::label('password', 'Senha:') !!}
-                    {!! Form::input('password', 'password', null, ['class'=>'form-control', 'placeholder'=>'Senha', 'required']) !!}
-                    {!! Form::submit('Salvar', ['class'=>'float-right btn btn-primary mt-1']) !!}
-                    {!! Form::close() !!}
+                    <div class="form-group">
+                        {!! Form::label('name', 'Nome:') !!}
+                        {!! Form::input('text', 'name', null, ['class'=>'form-control', 'autofocus', 'placeholder'=>'Nome', 'required']) !!}
+                    </div>
+                    <div class="form-group">
+                        {!! Form::label('email', 'E-mail:') !!}
+                        {!! Form::input('email', 'email', null, ['class'=>'form-control', 'placeholder'=>'E-mail', 'required']) !!}
+                    </div>
+                    <div class="form-group">
+                        {!! Form::label('password', 'Senha:') !!}
+                        {!! Form::input('password', 'password', null, ['class'=>'form-control', 'placeholder'=>'Senha', 'required']) !!}
+                    </div>
+                    <div class="form-group">
+                        {!! Form::submit('Salvar', ['class'=>'float-right btn btn-primary mt-1']) !!}
+                        {!! Form::close() !!}
+                    </div>
                 </div>
             </div>
         </div>

@@ -24,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
-    <div id="app">
+    <div id="app">        
         <nav class="navbar navbar-expand-md navbar-dark shadow-sm navbarfade">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -52,18 +52,21 @@
                         
                         <!-- Authentication Links -->
                         @guest
+                            <!--
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                                 </li>
                             @endif
-                            
+                            -->
+
+                            <!--
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Cadastrar') }}</a>
                                 </li>
                             @endif
-                            
+                            -->
                         @else
                         
                             <li class="nav-item dropdown">
@@ -92,9 +95,11 @@
         <main class="py-4">
             @yield('content')
         </main>
-        <footer class='jumbotron-expand-md text-white my-2 py-3 footer'>
+        <!--
+        <div class="footer">
             Todos os direitos reservados &copy; 2022
-        </footer>
+        </div>
+        -->
     </div>
 </body>
 </html>

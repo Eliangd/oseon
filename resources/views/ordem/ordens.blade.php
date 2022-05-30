@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-center">
-                    <h4>Lista de Ordens</h4>
+                    <h4>Lista de Ordens:</h4>
                 </div>
                 <div class="card-body">
                 @if(Session::has('mensagem_sucesso'))

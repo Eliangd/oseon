@@ -21582,8 +21582,9 @@ readers do not read off random characters that represent icons */
 /* Configurções do FOOTER da página */
 .footer{
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
+  height: 200px;
   text-align: center;
   font-size: 15px;
 }
@@ -21671,10 +21672,8 @@ readers do not read off random characters that represent icons */
   transform: scale(1.1);
 }
 
-/* Removendo Sublinhado Azul em Links
-a:link, a:visited,  a:hover, a:active
-{
-  color: white;
-  text-decoration: none;
+/* Alinha as tags dentro de um div */
+.divAlinhar{
+  display:flex; /* deixa as tags na mesma linha */
+  justify-content: space-between; /* adiciona um espaçamento entre elas */
 }
-*/

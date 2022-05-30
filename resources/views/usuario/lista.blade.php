@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header text-center">
-                    <h4>Lista de Usuários</h4>
+                <div class="card-header divAlinhar">
+                    <h4>Lista de Usuários:</h4>
                     <a href="{{ url('usuario/create') }}" class="btn btn-success float-right">
                         <i class="far fa-plus-square"></i> Novo Usuário
                     </a>
@@ -43,10 +43,10 @@
                                         <td>{{ $usuario->name }}</td>
                                         <td>{{ $usuario->email }}</td>
                                         <td>
-                                            <a href="{{ url('usuario/'.$usuario->id) }}" class="btn btn-primary btn-sm"><i class="fas fa-pen"></i> Editar</a>
                                             {!! Form::open(['method'=>'DELETE', 'url'=>'usuario/'.$usuario->id, 'style'=>'display:inline']) !!}
                                                 <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</button>
                                             {!! Form::close() !!}
+                                            <a href="{{ url('usuario/'.$usuario->id) }}" class="btn btn-primary btn-sm"><i class="fas fa-pen"></i> Editar</a>                                            
                                         </td>
                                     </tr>
                                 @endforeach

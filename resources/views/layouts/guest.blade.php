@@ -47,9 +47,11 @@
         <main>
             @yield('content')
         </main class="py-4">
-        <footer class='jumbotron-expand-md text-white my-2 py-3 footer'>
+        <!--
+        <div class="footer">
             Todos os direitos reservados &copy; 2022
-        </footer>
+        </div>
+        -->
     </div>
 </body>
 </html>
