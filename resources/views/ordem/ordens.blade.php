@@ -38,11 +38,11 @@
                         <table class="table table-sm table-hover table-bordered table-striped">
                             <thead>
                                 <tr>                                    
-                                    <th>Código</th>
-                                    <th>Protocolo</th>
-                                    <th>Nome</th>                                    
+                                    <th>@sortablelink('ords_codigo')</th>
+                                    <th>@sortablelink('protocolo')</th>
+                                    <th>@sortablelink('nome')</th>                                    
                                     <th>CPF / CNPJ</th>
-                                    <th>Status</th>
+                                    <th>@sortablelink('status_ordem')</th>
                                     <th>Opções</th>
                                 </tr>
                             </thead>

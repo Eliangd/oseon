@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header" style="display:flex; justify-content:space-between">
+                <div class="card-header" style="display:flex; justify-content:space-between"> <!-- display:flex; -> deixa as tags na mesma linha /// justify-content: space-between; -> adiciona um espaçamento entre elas -->
                     <h4>Cadastro de Usuários:</h4>
                     <a href="{{ url('usuario') }}" class="btn btn-success float-right"><i class="fas fa-list"></i> Listar Usuários</a>
                 </div>
