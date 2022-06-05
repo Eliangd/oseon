@@ -53,7 +53,7 @@ class OrdensController extends Controller
             ])->paginate(10);
         }
 
-        return view('ordem\ordens', compact('ordens'));
+        return view('ordem.ordens', compact('ordens'));
     }
     
     public function create()
