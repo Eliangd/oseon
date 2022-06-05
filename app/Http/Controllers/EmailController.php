@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Redirect;
 
 class EmailController extends Controller
 {
+    public function index()
+    {       
+        return view('emails.emailEnviado'); 
+    }
+
     //Função responsável por enviar e-mail.
     public function email(Request $request, Ordem $ordem){
         $dest_nome = 'Administrador Oseon';       //nome de quem irá receber a mensagem.
@@ -25,6 +30,6 @@ class EmailController extends Controller
         
         //$request->session()->flash('mensagem_sucesso', 'E-mail enviado com sucesso!'); //mensagem de sucesso do envio do e-mail.
         
-        return view('ordem.busca.emailEnviado'); //redireciona para a tela inicial.
+        return Redirect::to('email'); //redireciona para a tela inicial.
     }
 }
