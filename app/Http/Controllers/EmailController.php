@@ -11,7 +11,7 @@ class EmailController extends Controller
 {
     public function index()
     {       
-        return view('emails.emailEnviado'); 
+        return view('emails.emailEnviado'); //quando acessado a rota /email ele retorna a view emailEnviado.
     }
 
     //Função responsável por enviar e-mail.
@@ -23,13 +23,13 @@ class EmailController extends Controller
             function($mensagem) use ($dest_nome, $dest_email, $request){
                 $mensagem->to($dest_email, $dest_nome) 
                         ->subject('E-mail de Contato Oseon!') //assundo do e-mail. 
-                        ->bcc(['admin@oseonsystem.online']); //conta responsável por enviar o e-mail.. 
+                        ->bcc(['admin@oseonsystem.online']); //conta responsável por enviar o e-mail. 
             }
         );
         
         
         //$request->session()->flash('mensagem_sucesso', 'E-mail enviado com sucesso!'); //mensagem de sucesso do envio do e-mail.
         
-        return Redirect::to('email'); //redireciona para a tela inicial.
+        return Redirect::to('email'); //redireciona para a view emailEnviado.
     }
 }

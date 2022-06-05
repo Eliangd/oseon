@@ -67,7 +67,7 @@
                             @endif
                         </div>
                         <br />
-                        <a href="{{ url('/') }}" class="btn btn-primary btn-success float-right"><i class="fas fa-undo-alt"></i> Voltar ao menu</a>                                               
+                        <a href="{{ url('/') }}" class="btn btn-primary btn-success float-right"><i class="fas fa-undo-alt"></i> Voltar a tela inicial</a>                                               
                     </div>
                 @endforeach
             @endif

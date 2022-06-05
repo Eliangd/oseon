@@ -20,8 +20,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('usuario', UsersController::class);
 Route::resource('ordem', OrdensController::class);
-//Route::resource('email', OrdensController::class);
-//Route::post('email', [EmailController::class, 'email']);
 Route::post('/email', [App\Http\Controllers\EmailController::class, 'email'])->name('email');
 Route::get('/email', [App\Http\Controllers\EmailController::class, 'index']);
 Route::post('/email', [App\Http\Controllers\EmailController::class, 'index']);
