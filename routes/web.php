@@ -24,6 +24,7 @@ Route::resource('ordem', OrdensController::class);
 //Route::post('email', [EmailController::class, 'email']);
 Route::post('/email', [App\Http\Controllers\EmailController::class, 'email'])->name('email');
 Route::get('/email', [App\Http\Controllers\EmailController::class, 'index']);
+Route::post('/email', [App\Http\Controllers\EmailController::class, 'index']);
 Route::post('/filtro', [App\Http\Controllers\OrdensController::class, 'filtroOrdens'])->name('filtro');
 Route::get('/filtro', [App\Http\Controllers\OrdensController::class, 'filtroOrdens'])->name('filtro'); 
 //Adicionado essa rota GET para funcionar a ordenação após filtrar
