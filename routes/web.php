@@ -20,11 +20,13 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('usuario', UsersController::class);
 Route::resource('ordem', OrdensController::class);
+
 Route::resource('email', EmailController::class);
 Route::post('/enviarEmail', [App\Http\Controllers\EmailController::class, 'email']);
 Route::get('/enviarEmail', [App\Http\Controllers\EmailController::class, 'email']);
-//Route::get('/email', [App\Http\Controllers\EmailController::class, 'index']);
-//Route::post('/email', [App\Http\Controllers\EmailController::class, 'index']);
+Route::get('/email', [App\Http\Controllers\EmailController::class, 'index']);
+Route::post('/email', [App\Http\Controllers\EmailController::class, 'index']);
+
 Route::post('/filtro', [App\Http\Controllers\OrdensController::class, 'filtroOrdens'])->name('filtro');
 Route::get('/filtro', [App\Http\Controllers\OrdensController::class, 'filtroOrdens'])->name('filtro'); 
 //Adicionado essa rota GET para funcionar a ordenação após filtrar
