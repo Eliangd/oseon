@@ -25,6 +25,6 @@ class EmailController extends Controller
         
         $request->session()->flash('mensagem_sucesso', 'E-mail enviado com sucesso!'); //mensagem de sucesso do envio do e-mail.
         
-        return Redirect::to('/'); //redireciona para a tela inicial.
+        return Redirect::to('./'); //redireciona para a tela inicial.
     }
 }
