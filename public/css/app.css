@@ -21672,8 +21672,8 @@ readers do not read off random characters that represent icons */
   transform: scale(1.1);
 }
 
-/* Alinha as tags dentro de um div */
-.divAlinhar{
-  display:flex; /* deixa as tags na mesma linha */
-  justify-content: space-between; /* adiciona um espaçamento entre elas */
-}
+/* Alinha as tags dentro de um div*/
+/*.divAlinhar*/
+/*  display:flex;*/ /* deixa as tags na mesma linha */
+/*  justify-content: space-between;*/ /* adiciona um espaçamento entre elas */
+/*}*/

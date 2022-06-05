@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header divAlinhar">
+                <div class="card-header" style="display:flex; justify-content:space-between">
                     <h4>Lista de Usuários:</h4>
                     <a href="{{ url('usuario/create') }}" class="btn btn-success float-right">
                         <i class="far fa-plus-square"></i> Novo Usuário
