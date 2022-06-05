@@ -31,9 +31,8 @@ class OrdensController extends Controller
         $filtroCodigo = request('codigo');
         $filtroNome = request('nome');
         $ordens = Ordem::all();
-        $ordens = Ordem::paginate(10);
+        $ordens = Ordem::sortable()->paginate(10);
         Paginator::useBootstrap();
-        //$ordens->search($filtro);
 
         if($filtroProtocolo){
             $ordens = Ordem::where([

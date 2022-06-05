@@ -26,6 +26,7 @@
                 <div class="box-header">
                     <form action="{{ route('filtro') }}" method="POST" class="form form-inline">
                         {!! csrf_field() !!}
+                        
                         <input type="text" name="codigo" class="form-control mr-1" placeholder="Código">   
                         <input type="text" name="protocolo" class="form-control mr-1" placeholder="Protocolo">
                         <input type="text" name="nome" size="60" class="form-control mr-1" placeholder="Nome">

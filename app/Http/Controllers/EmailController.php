@@ -12,13 +12,13 @@ class EmailController extends Controller
     //Função responsável por enviar e-mail.
     public function email(Request $request, Ordem $ordem){
         $dest_nome = 'Administrador Oseon';       //nome de quem irá receber a mensagem.
-        $dest_email = 'sistemaoseon@outlook.com'; //destinatario -> e-mail que irá receber a mensagem enviada pelo sistema.
+        $dest_email = 'admin@oseonsystem.online'; //destinatario -> e-mail que irá receber a mensagem enviada pelo sistema.
         $dados = array('id'=>$request['id'], 'nome'=>$request['nome'], 'mensagem'=>$request['mensagem']); //busca as informações dessa ordem que serão envidas no e-mail. Nesse caso o ID, NOME e a MENSAGEM digitado.
         Mail::send('emails.contato', $dados, //'emails.contato' é a view que tem a mensagem que sera enviada por e-mail pré configurada.
             function($mensagem) use ($dest_nome, $dest_email, $request){
                 $mensagem->to($dest_email, $dest_nome) 
                         ->subject('E-mail de Contato Oseon!') //assundo do e-mail. 
-                        ->bcc(['sistemaoseon@outlook.com']); //conta responsável por enviar o e-mail.. 
+                        ->bcc(['admin@oseonsystem.online']); //conta responsável por enviar o e-mail.. 
             }
         );
         
