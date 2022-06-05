@@ -13,7 +13,7 @@ class EmailController extends Controller
     {       
         return view('emails.emailEnviado'); //quando acessado a rota /email ele retorna a view emailEnviado.
     }
-
+    
     //Função responsável por enviar e-mail.
     public function email(Request $request, Ordem $ordem){
         $dest_nome = 'Administrador Oseon';       //nome de quem irá receber a mensagem.
