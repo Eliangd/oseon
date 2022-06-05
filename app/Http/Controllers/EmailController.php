@@ -25,8 +25,7 @@ class EmailController extends Controller
                         ->subject('E-mail de Contato Oseon!') //assundo do e-mail. 
                         ->bcc(['admin@oseonsystem.online']); //conta responsável por enviar o e-mail. 
             }
-        );
-        
+        );        
         
         //$request->session()->flash('mensagem_sucesso', 'E-mail enviado com sucesso!'); //mensagem de sucesso do envio do e-mail.
         
