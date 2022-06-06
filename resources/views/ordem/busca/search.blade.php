@@ -53,13 +53,13 @@
                         </div>
                         <div class="card ordemdiv">
                             @if($ordem->status_ordem != 'Pronto')
-                            {!! Form::open(['method'=>'POST', 'url'=>'enviarEmail']) !!}
-                                {!! csrf_field() !!}
+                            {!! Form::open(['method'=>'POST', 'url'=>'enviarEmail']) !!}                                
                                 <div class="card py-2 col-md-12 ordemdiv">
                                     <h4><strong> Em caso de dúvida envie uma mensagem:</strong></h4>
                                     <input hidden name="id" value={{ $ordem->id }}>
                                     <input hidden name="nome" value={{ $ordem->nome }}>
                                     {!! Form::textarea('mensagem', null, ['class'=>'form-control', 'required', 'placeholder'=>'Mensagem', 'rows'=>3]) !!}
+                                    {!! csrf_field() !!}
                                 </div>
                                 <div class="card">
                                     {!! Form::submit('Enviar E-mail', ['class'=>'form-control btn btn-primary']) !!}
