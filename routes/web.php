@@ -21,9 +21,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('usuario', UsersController::class);
 Route::resource('ordem', OrdensController::class);
 
-Route::resource('email', EmailController::class);
+
 Route::post('/enviarEmail', [App\Http\Controllers\EmailController::class, 'email']);
-Route::get('/enviarEmail', [App\Http\Controllers\EmailController::class, 'email']);
 Route::get('/email', [App\Http\Controllers\EmailController::class, 'index']);
 Route::post('/email', [App\Http\Controllers\EmailController::class, 'index']);
 

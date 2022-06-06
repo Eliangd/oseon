@@ -54,6 +54,7 @@
                         <div class="card ordemdiv">
                             @if($ordem->status_ordem != 'Pronto')
                             {!! Form::open(['method'=>'POST', 'url'=>'enviarEmail']) !!}
+                                {!! csrf_field() !!}
                                 <div class="card py-2 col-md-12 ordemdiv">
                                     <h4><strong> Em caso de dúvida envie uma mensagem:</strong></h4>
                                     <input hidden name="id" value={{ $ordem->id }}>
