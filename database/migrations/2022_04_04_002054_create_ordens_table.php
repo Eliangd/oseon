@@ -10,8 +10,7 @@ class CreateOrdensTable extends Migration
     public function up()
     {
         Schema::create('ordens', function (Blueprint $table) {
-            $table->id();
-            $table->string('ords_codigo',6);            
+            $table->increments('id');           
             $table->string('protocolo', 13);
             $table->string('nome', 100);
             $table->string('email');

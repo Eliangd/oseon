@@ -21,7 +21,7 @@
                     <div class="card-body">
                         <div style="display: flex" class="card py-2 ordemdiv">
                             <div class="col">
-                                <h4><strong> Código: </strong> {{ $ordem->ords_codigo }}</h4>
+                                <h4><strong> Código: </strong> {{ $ordem->id }}</h4>
                             </div>
                             <div class="col">
                                 <h4><strong> Protocolo: </strong> {{ $ordem->protocolo }}</h4>

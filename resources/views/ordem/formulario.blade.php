@@ -28,10 +28,6 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('ords_codigo', 'Código:') !!}
-                        {!! Form::input('text', 'ords_codigo', null, ['class'=>'form-control', 'placeholder'=>'Código', 'required']) !!}
-                    </div>
-                    <div class="form-group">
                         {!! Form::label('protocolo', 'Protocolo:') !!}
                         {!! Form::input('text', 'protocolo', null, ['class'=>'form-control', 'placeholder'=>'Protocolo', 'required']) !!}
                     </div>
@@ -49,7 +45,7 @@
                     </div>                    
                     <div class="form-group">
                         {!! Form::label('cpf', 'CPF / CNPJ:') !!}
-                        {!! Form::input('text', 'cpf', null, ['class'=>'form-control', 'placeholder'=>'CPF']) !!}
+                        {!! Form::input('text', 'cpf', null, ['class'=>'form-control', 'placeholder'=>'CPF / CNPJ']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('endereco', 'Endereço:') !!}

@@ -39,7 +39,7 @@
                         <table class="table table-sm table-hover table-bordered table-striped">
                             <thead>
                                 <tr>                                    
-                                    <th>@sortablelink('ords_codigo')</th>
+                                    <th>@sortablelink('id')</th>
                                     <th>@sortablelink('protocolo')</th>
                                     <th>@sortablelink('nome')</th>                                    
                                     <th>CPF / CNPJ</th>
@@ -50,7 +50,7 @@
                             <tbody>
                                 @foreach ($ordens as $ordem)
                                     <tr>
-                                        <td>{{ $ordem->ords_codigo}}</td>
+                                        <td>{{ $ordem->id}}</td>
                                         <td>{{ $ordem->protocolo }}</td>
                                         <td>{{ $ordem->nome }}</td>
                                         <td>{{ $ordem->cpf }}</td>
