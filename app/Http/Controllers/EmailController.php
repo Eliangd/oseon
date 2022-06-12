@@ -16,6 +16,9 @@ class EmailController extends Controller
     
     //Função responsável por enviar e-mail.
     public function email(Request $request, Ordem $ordem){
+        ini_set('display_errors', true);
+        error_reporting(E_ALL);
+        
         $dest_nome = 'Administrador Oseon';       //nome de quem irá receber a mensagem.
         $dest_email = 'admin@oseonsystem.online'; //destinatario -> e-mail que irá receber a mensagem enviada pelo sistema.
         $dados = ['id'=>$request['id'], 'nome'=>$request['nome'], 'mensagem'=>$request['mensagem']]; //busca as informações dessa ordem que serão envidas no e-mail. Nesse caso o ID, NOME e a MENSAGEM digitado.
