@@ -29,31 +29,19 @@ class AbrirOrdemController extends Controller
         $dados->status_ordem = 'A Fazer';
         $dados->save();
 
-        /*$dest_nome = 'Administrador Portus';
-        $dest_email = 'sistemaportus@gmail.com';
-        $dados = array('nome'=>$request['nome'], 'email'=>$request['email'], 'cpf'=>$request['cpf'], 'telefone'=>$request['telefone'], 'endereco'=>$request['endereco'], 'mensagem'=>$request['mensagem']);
-        Mail::send('emails.contato', $dados,
-            function($mensagem) use ($dest_nome, $dest_email, $request){
-                $mensagem->to($dest_email, $dest_nome)
-                        ->subject('E-mail de Contato Portus!')
-                        ->bcc(['sistemaportus@gmail.com']);
-                $mensagem->from($request['email'], $request['nome']);
-            }
-        );
-
-
+        
         $dest_nome = $request->nome;
         $dest_email = $request->email;
         $protocolo = $request->protocolo;
         $dados = array('nome'=>$request['nome'], 'protocolo'=>$protocolo);
-        Mail::send('emails.retornocliente', $dados,
+        Mail::send('emails.envioProtocolo', $dados,
             function($mensagem) use ($dest_nome, $dest_email, $request){
                 $mensagem->to($dest_email, $dest_nome)
-                        ->subject('Código de acesso ao Portus!');
+                        ->subject('Código de acesso ao Oseon!');
             }
         );
 
-        */
+        
 
         $request->session()->flash('mensagem_sucesso', 'Ordem criada com sucesso!');
         return Redirect::to('ordem');
