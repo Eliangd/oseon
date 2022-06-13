@@ -37,19 +37,19 @@ class OrdensController extends Controller
         if($filtroProtocolo){
             $ordens = Ordem::where([
                 ['protocolo', 'like', $filtroProtocolo]
-            ])->paginate(10);
+            ])->sortable()->paginate(10);
         }
 
         if($filtroCodigo){
             $ordens = Ordem::where([
                 ['ords_codigo', 'like', $filtroCodigo]
-            ])->paginate(10);
+            ])->sortable()->paginate(10);
         }
 
         if($filtroNome){
             $ordens = Ordem::where([
                 ['nome', 'like', "%$filtroNome%"]
-            ])->paginate(10);
+            ])->sortable()->paginate(10);
         }
 
         return view('ordem.ordens', compact('ordens'));

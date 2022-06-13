@@ -44,14 +44,15 @@
                             <div class="col">
                                 <h4><strong> Defeito: </strong> {{ $ordem->defeito }}</h4>
                             </div>
-                        </div>
+                        </div>                        
                         <div class="card py-2 ordemdiv">
                             <div class="col-md-12">
                                 <h4><strong> Relatório Técnico:</strong></h4>
                                 <h5>{{ $ordem->relatorio }}</h5>
                             </div>
-                        </div>
-                        <div class="card ordemdiv">
+                        </div>   
+                        <br />
+                        <div class="card ordemdiv">                            
                             @if($ordem->status_ordem != 'Pronto')
                             {!! Form::open(['method'=>'POST', 'url'=>'enviarEmail']) !!}                                
                                 <div class="card py-2 col-md-12 ordemdiv">
@@ -66,9 +67,14 @@
                                 </div>
                             {!! Form::close() !!}
                             @endif
-                        </div>
+                        </div>                                                     
                         <br />
-                        <a href="{{ url('/') }}" class="btn btn-primary btn-success float-right"><i class="fas fa-undo-alt"></i> Voltar a tela inicial</a>                                               
+                        <div class="col">
+                            <h4><strong> Ou então entre em contato conosco pelo nosso WhatsApp:</strong></h4>
+                            <a href="https://web.whatsapp.com/send?phone=5546988007697" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        </div> 
+                        <br />
+                        <a href="{{ url('/') }}" class="btn btn-primary float-right"><i class="fas fa-undo-alt"></i> Voltar a tela inicial</a>                                               
                     </div>
                 @endforeach
             @endif

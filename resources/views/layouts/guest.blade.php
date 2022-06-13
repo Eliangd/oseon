@@ -27,7 +27,6 @@
     <div>
         <nav class="navbar navbar-expand-md navbar-dark shadow-sm navbarfade">
             <div class="container">
-                <!-- <img class="rounded-circle mr-3" src="imagens/logo.jpg" alt="Logo da Loja"> -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Oseon - Ordem de Serviço Online
                 </a>

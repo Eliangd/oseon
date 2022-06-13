@@ -21615,7 +21615,7 @@ readers do not read off random characters that represent icons */
 /* Botões Redes Sociais */
 
 .botaoWhats{
-  position: fixed;
+  position: relative;
   width: 70px;
   height: 60px;
   bottom: 50px;

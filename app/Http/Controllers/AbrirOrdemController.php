@@ -29,11 +29,11 @@ class AbrirOrdemController extends Controller
         $dados->status_ordem = 'A Fazer';
         $dados->save();
 
-        
+
         $dest_nome = $request->nome;
         $dest_email = $request->email;
         $protocolo = $request->protocolo;
-        $dados = array('nome'=>$request['nome'], 'protocolo'=>$protocolo);
+        $dados = array('nome'=>$dest_nome, 'protocolo'=>$protocolo);
         Mail::send('emails.envioProtocolo', $dados,
             function($mensagem) use ($dest_nome, $dest_email, $request){
                 $mensagem->to($dest_email, $dest_nome)
@@ -41,7 +41,6 @@ class AbrirOrdemController extends Controller
             }
         );
 
-        
 
         $request->session()->flash('mensagem_sucesso', 'Ordem criada com sucesso!');
         return Redirect::to('ordem');
