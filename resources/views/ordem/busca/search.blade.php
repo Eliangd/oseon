@@ -70,11 +70,14 @@
                         </div>                                                     
                         <br />
                         <div class="col">
-                            <h4><strong> Ou então entre em contato conosco pelo nosso WhatsApp:</strong></h4>
+                            <h4><strong> Se preferir entre em contato conosco pelo nosso WhatsApp:</strong></h4>
                             <a href="https://web.whatsapp.com/send?phone=5546988007697" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                         </div> 
                         <br />
-                        <a href="{{ url('/') }}" class="btn btn-primary float-right"><i class="fas fa-undo-alt"></i> Voltar a tela inicial</a>                                               
+                        <div>
+                            <a href="{{ url('/') }}" class="btn btn-primary float-right"><i class="fas fa-undo-alt"></i> Voltar a tela inicial</a>
+                            <button type="button" value="imprimir" class="btn btn-dark no-print float-right mr-1" onclick="window.print();">Imprimir</button>
+                        </div>                                               
                     </div>
                 @endforeach
             @endif

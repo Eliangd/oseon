@@ -21671,3 +21671,11 @@ readers do not read off random characters that represent icons */
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}

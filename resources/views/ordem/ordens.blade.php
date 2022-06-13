@@ -50,7 +50,7 @@
                             <tbody>
                                 @foreach ($ordens as $ordem)
                                     <tr>
-                                        <td>{{ $ordem->id}}</td>
+                                        <td>{{ $ordem->id }}</td>
                                         <td>{{ $ordem->protocolo }}</td>
                                         <td>{{ $ordem->nome }}</td>
                                         <td>{{ $ordem->cpf }}</td>
