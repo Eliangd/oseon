@@ -30,9 +30,17 @@ class OrdensController extends Controller
         $filtroProtocolo = request('protocolo');
         $filtroCodigo = request('codigo');
         $filtroNome = request('nome');
+        $filtroStatus = request('status_ordem');
+        
         $ordens = Ordem::all();
         $ordens = Ordem::sortable()->paginate(10);
         Paginator::useBootstrap();
+
+        if($filtroStatus){
+            $ordens = Ordem::where([
+                ['status_ordem', 'like', $filtroStatus]
+            ])->sortable()->paginate(10);
+        }
 
         if($filtroProtocolo){
             $ordens = Ordem::where([

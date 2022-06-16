@@ -33,10 +33,12 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
+                        <li class="nav-item mr-3">
+                            <a href="https://web.whatsapp.com/send?phone=5546988007697" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        </li>
+                        <li class="nav-item">                            
                             <a class="nav-link" href="{{ url('home') }}">Acesso Restrito <i class="fas fa-sign-in-alt"></i></a>
                         </li>
                    </ul>

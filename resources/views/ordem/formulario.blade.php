@@ -20,7 +20,7 @@
                         {!! Form::open(['method'=> 'POST', 'url'=>'ordem'])  !!}
                     @endif
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Status</label>
+                        <label for="exampleInputEmail1">Selecionar Status:</label>
                         <select class="form-control" name="status_ordem">
                             <option value="A fazer">A Fazer</option>
                             <option value="Em andamento">Em Andamento</option>
@@ -29,43 +29,43 @@
                     </div>
                     <div class="form-group">
                         {!! Form::label('protocolo', 'Protocolo:') !!}
-                        {!! Form::input('text', 'protocolo', null, ['class'=>'form-control', 'placeholder'=>'Protocolo', 'required']) !!}
+                        {!! Form::input('text', 'protocolo', null, ['class'=>'form-control', 'placeholder'=>'Protocolo', 'disabled']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('nome', 'Nome:') !!}
-                        {!! Form::input('text', 'nome', null, ['class'=>'form-control', 'autofocus', 'placeholder'=>'Nome', 'required']) !!}
+                        {!! Form::input('text', 'nome', null, ['class'=>'form-control', 'autofocus', 'placeholder'=>'Nome', 'disabled']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('email', 'E-mail:') !!}
-                        {!! Form::email('email', null, ['class'=>'form-control', 'placeholder'=>'E-mail', 'required']) !!}
+                        {!! Form::email('email', null, ['class'=>'form-control', 'placeholder'=>'E-mail', 'disabled']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('telefone', 'Telefone:') !!}
-                        {!! Form::input('text', 'telefone', null, ['class'=>'form-control', 'placeholder'=>'Telefone']) !!}
+                        {!! Form::input('text', 'telefone', null, ['class'=>'form-control', 'placeholder'=>'Telefone', 'disabled']) !!}
                     </div>                    
                     <div class="form-group">
                         {!! Form::label('cpf', 'CPF / CNPJ:') !!}
-                        {!! Form::input('text', 'cpf', null, ['class'=>'form-control', 'placeholder'=>'CPF / CNPJ']) !!}
+                        {!! Form::input('text', 'cpf', null, ['class'=>'form-control', 'placeholder'=>'CPF / CNPJ', 'disabled']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('endereco', 'Endereço:') !!}
-                        {!! Form::input('text', 'endereco', null, ['class'=>'form-control', 'placeholder'=>'Endereço']) !!}
+                        {!! Form::input('text', 'endereco', null, ['class'=>'form-control', 'placeholder'=>'Endereço', 'disabled']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('equipamento', 'Equipamento:') !!}
-                        {!! Form::input('text', 'equipamento', null, ['class'=>'form-control', 'placeholder'=>'Equipamento', 'required']) !!}
+                        {!! Form::input('text', 'equipamento', null, ['class'=>'form-control', 'placeholder'=>'Equipamento', 'disabled']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('modelo', 'Modelo:') !!}
-                        {!! Form::input('text', 'modelo', null, ['class'=>'form-control', 'placeholder'=>'Modelo', 'required']) !!}
+                        {!! Form::input('text', 'modelo', null, ['class'=>'form-control', 'placeholder'=>'Modelo', 'disabled']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('acessorios', 'Acessórios:') !!}
-                        {!! Form::input('text', 'acessorios', null, ['class'=>'form-control', 'placeholder'=>'Acessorios', 'required']) !!}
+                        {!! Form::input('text', 'acessorios', null, ['class'=>'form-control', 'placeholder'=>'Acessorios', 'disabled']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('defeito', 'Descreva o defeito:') !!}
-                        {!! Form::textarea('defeito', null, ['class'=>'form-control', 'required', 'placeholder'=>'Defeito', 'rows'=>4]) !!}
+                        {!! Form::textarea('defeito', null, ['class'=>'form-control', 'required', 'placeholder'=>'Defeito', 'rows'=>4, 'disabled']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('relatorio', 'Adicionar relatório técnico:') !!}
