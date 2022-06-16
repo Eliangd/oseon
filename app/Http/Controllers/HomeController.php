@@ -15,6 +15,6 @@ class HomeController extends Controller
     //quando acessado pela rota exibe a view da home do sistema.
     public function index()
     {
-        return view('home');
+        return view('home'); //retorna a view home / tela inicial.
     }
 }

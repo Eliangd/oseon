@@ -9,6 +9,7 @@
                     <h4>Lista de Ordens:</h4>
                 </div>
                 <div class="card-body">
+                <!-- Exibe mensagem de sucesso -->
                 @if(Session::has('mensagem_sucesso'))
                     <div class="alert alert-success" id="alert"> 
                         {{ Session::get('mensagem_sucesso') }}
@@ -22,7 +23,7 @@
                     }, 2000);
                 });
                 </script>        
-                
+                <!-- FILTROS -->
                 <div class="box-header">
                     <form action="{{ route('filtro') }}" method="POST" class="form form-inline">
                         {!! csrf_field() !!}
@@ -40,6 +41,7 @@
                 </div>
                 
                 <hr />
+                    <!-- Tabela com as Ordens -->
                     <div class="table-responsive">
                         <table class="table table-sm table-hover table-bordered table-striped">
                             <thead>
@@ -65,17 +67,14 @@
                                                 <input hidden id="search" name="search" value={{ $ordem->protocolo }} >
                                                 <button type="submit" class="btn btn-info btn-sm"><i class="fas fa-search"></i> Vizualizar</button>
                                             </form>
-                                            <!--
-                                            {!! Form::open(['method'=>'DELETE', 'url'=>'ordem/'.$ordem->id, 'style'=>'display:inline']) !!}
-                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</button>
-                                            {!! Form::close() !!}
-                                            -->
+                                            <!-- Se o status da ordem for diferente de pronto, exibe o botão de editar -->
                                             @if($ordem->status_ordem != 'Pronto')
                                                 <a href="{{ url('ordem/'.$ordem->id) }}" class="btn btn-primary btn-sm"><i class="fas fa-pen"></i> Editar</a>
                                             @endif
                                         </td>
                                     </tr>  
                                     @empty
+                                    <!-- Caso não seja encontrada nenhuma ordem, irá aparecer essa mensagem -->
                                     <tr>
                                         <td colspan="6" class="text-center">Ordem não encontrada ou inexistente!</td>
                                     </tr>         
@@ -83,6 +82,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!-- Paginator -->
                     <div class="pagination justify-content-center">
                          {{ $ordens->links() }} 
                     </div>

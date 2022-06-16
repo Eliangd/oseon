@@ -12,6 +12,7 @@
                     </a>
                 </div>
                 <div class="card-body">
+                    <!-- Exibe mensagem de sucesso -->
                     @if(Session::has('mensagem_sucesso'))
                         <div class="alert alert-success" id="alert"> 
                             {{ Session::get('mensagem_sucesso') }}
@@ -25,7 +26,8 @@
                                 $("div.alert").remove();
                             }, 2000);
                         });
-                    </script>                    
+                    </script>       
+                    <!-- Tabela com os usuários -->             
                     <div class="table-responsive">
                         <table class="table table-sm table-hover table-bordered table-striped">
                             <thead>
@@ -53,6 +55,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!-- Paginator -->
                     <div class="pagination justify-content-center">
                         {{ $usuarios->links() }}
                     </div>

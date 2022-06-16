@@ -21,9 +21,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('usuario', UsersController::class);
 Route::resource('ordem', OrdensController::class);
-Route::get('abrirOrdem', [AbrirOrdemController::class, 'index']);
-Route::post('novaOrdem', [AbrirOrdemController::class, 'store']);
-
 
 Route::post('/enviarEmail', [App\Http\Controllers\EmailController::class, 'email']);
 Route::get('/email', [App\Http\Controllers\EmailController::class, 'index']);

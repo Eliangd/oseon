@@ -11,9 +11,11 @@
                 </div>
 
                 <div class="card-body">
+                     <!-- Envia a mensagem de sucesso -->
                     @if(Session::has('mensagem_sucesso'))
                         <div class="alert alert-success">{{ Session::get('mensagem_sucesso') }}</div>
                     @endif
+                    <!-- Retorna o usuario selecionado e exibe os campos para atualizar as informações -->
                     @if(Route::is('usuario.show'))
                         {!! Form::model($usuario, ['method'=>'PATCH', 'url'=>'usuario/'.$usuario->id]) !!}
                         {!! Form::hidden('original', $usuario->password) !!}

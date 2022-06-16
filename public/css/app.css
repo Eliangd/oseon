@@ -21559,7 +21559,6 @@ readers do not read off random characters that represent icons */
 .backcolor{
   background-color: rgb(26,32,44);
 }
-
 .colorHome{
   background-color: rgb(9,10,31);
 }
@@ -21612,66 +21611,7 @@ readers do not read off random characters that represent icons */
   outline: 0;
 }
 
-/* Botões Redes Sociais */
-
-.botaoWhats{
-  position: relative;
-  width: 70px;
-  height: 60px;
-  bottom: 50px;
-  right: 40px;
-  top: 70px;
-  background-color: #25d366; 
-  color: white;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 40px;
-}
-.botaoWhats:hover{
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.botaoInsta{
-  position: fixed;
-  width: 70px;
-  height: 60px;
-  bottom: 50px;
-  right: 190px;
-  top: 70px;
-  color: white;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 40px;
-  background: #f09433; 
-  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
-}
-.botaoInsta:hover{
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.botaoFace{
-  position: fixed;
-  width: 70px;
-  height: 60px;
-  bottom: 50px;
-  right: 115px;
-  top: 70px;
-  background-color: #1772e9; 
-  color: white;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 40px;
-}
-.botaoFace:hover{
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
+/* Botões Imprimir */
 @media print
 {    
     .no-print, .no-print *

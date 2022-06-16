@@ -35,6 +35,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
+                        <!-- Botão do WhatsApp na Navbar -->
                         <li class="nav-item mr-3">
                             <a href="https://web.whatsapp.com/send?phone=5546988007697" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                         </li>

@@ -1,3 +1,4 @@
+<!-- Conteúdo do E-mail pré definido de contato -->
 O cliente: {{ $nome }}<br />
 Ordem:  {{ $id }}<br />
 <br />

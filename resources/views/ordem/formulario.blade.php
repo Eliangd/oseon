@@ -11,14 +11,18 @@
                 </div>
 
                 <div class="card-body">
+                    <!-- Envia a mensagem de sucesso -->
                     @if(Session::has('mensagem_sucesso'))
                         <div class="alert alert-success">{{ Session::get('mensagem_sucesso') }}</div>
                     @endif
+                    <!-- Retorna a ordem selecionada e exibe os campos para atualizar as informações -->
                     @if(Route::is('ordem.show'))
                         {!! Form::model($ordem, ['method'=>'PATCH', 'url'=>'ordem/'.$ordem->id]) !!}
                     @else
                         {!! Form::open(['method'=> 'POST', 'url'=>'ordem'])  !!}
                     @endif
+
+                    <!-- Select para selecionar o status da ordem -->
                     <div class="form-group">
                         <label for="exampleInputEmail1">Selecionar Status:</label>
                         <select class="form-control" name="status_ordem">
@@ -27,6 +31,8 @@
                             <option value="Pronto">Pronto</option>
                         </select>
                     </div>
+
+                    <!-- Esses campos abaixo são apenas para vizualição das infomações da ordem selecionada -->
                     <div class="form-group">
                         {!! Form::label('protocolo', 'Protocolo:') !!}
                         {!! Form::input('text', 'protocolo', null, ['class'=>'form-control', 'placeholder'=>'Protocolo', 'disabled']) !!}
@@ -67,6 +73,8 @@
                         {!! Form::label('defeito', 'Descreva o defeito:') !!}
                         {!! Form::textarea('defeito', null, ['class'=>'form-control', 'required', 'placeholder'=>'Defeito', 'rows'=>4, 'disabled']) !!}
                     </div>
+
+                    <!-- Campo editavel para adicionar relatório técnico -->
                     <div class="form-group">
                         {!! Form::label('relatorio', 'Adicionar relatório técnico:') !!}
                         {!! Form::textarea('relatorio', null, ['class'=>'form-control', 'required', 'placeholder'=>'Relatório Técnico', 'rows'=>4]) !!}

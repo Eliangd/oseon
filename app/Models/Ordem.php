@@ -16,10 +16,4 @@ class Ordem extends Model
     public $sortable = ['ords_codigo', 'protocolo', 'nome', 'status_ordem'];
     // define a ordenação para esses campos.
 
-    public function status($status_ordem = null){
-        $stats = ['A fazer' => 'A fazer', 'Em andamento' => 'Em andamento', 'Pronto' => 'Pronto'];
-        if (!$status)
-            return $stats;
-        return $stats[$status];    
-    }
 }

@@ -39,9 +39,6 @@
                     <ul class="navbar-nav me-auto">
                         @auth
                             <li class="nav-item">
-                                <a href="{{ url('abrirOrdem') }}" class="nav-link"><i class="fas fa-clipboard-list"></i> Nova Ordem</a>
-                            </li>
-                            <li class="nav-item">
                                 <a href="{{ url('ordem') }}" class="nav-link"><i class="far fa-calendar-check"></i> Lista de Ordens</a>
                             </li>
                             <li class="nav-item">

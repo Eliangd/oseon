@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row">
         <div class= "col-md-12 py-4">
+            <!-- Verifica se a ordem digita existe, se ela nao foi encontrada rotarna uma tela de ordem não encontrada -->
             @if(count($ordens) == 0 && $search)
             <div class='body text-center text-white py-4'>
                 <img src="imagens/ordem2.png" alt="...">
@@ -13,6 +14,7 @@
                 </div>
             </div>
             @else
+
             <div class="card py-4 ordemdiv">                
                 <div class="text-center">
                     <h1>Ordem de Serviço</h1>
@@ -52,7 +54,8 @@
                             </div>
                         </div>   
                         <br />
-                        <div class="card ordemdiv">                            
+                        <div class="card ordemdiv">        
+                            <!-- Verifica se a ordem ja está pronta. Se o status for diferente de pronto ele exibe o campo enviar mensagem/email -->                    
                             @if($ordem->status_ordem != 'Pronto')
                             {!! Form::open(['method'=>'POST', 'url'=>'enviarEmail']) !!}                                
                                 <div class="card py-2 col-md-12 ordemdiv">
