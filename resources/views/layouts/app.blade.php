@@ -96,11 +96,11 @@
         <main class="py-4">
             @yield('content')
         </main>
-        
+        <!-- 
         <div class="footer text-white text-center navbar-fixed-bottom">
             Todos os direitos reservados &copy; 2022
         </div>
-        
+        -->
     </div>
 </body>
 </html>
