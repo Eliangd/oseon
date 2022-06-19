@@ -21579,14 +21579,7 @@ readers do not read off random characters that represent icons */
 }
 
 /* Configurções do FOOTER da página */
-.footer{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 200px;
-  text-align: center;
-  font-size: 15px;
-}
+
 
 /* Configurações Módulos do Sistema */
 .stylediv{
@@ -21620,3 +21613,12 @@ readers do not read off random characters that represent icons */
     }
 }
 
+
+.footer{
+  width: 100%;
+  height: 40px;
+  position: relative;
+  bottom: 0;
+  left: 0;  
+  text-align: center;
+  }

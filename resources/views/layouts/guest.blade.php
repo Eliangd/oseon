@@ -50,11 +50,11 @@
         <main>
             @yield('content')
         </main class="py-4">
-        <!--
-        <div class="footer">
+        
+        <div class="footer text-white">
             Todos os direitos reservados &copy; 2022
         </div>
-        -->
+        
     </div>
 </body>
 </html>

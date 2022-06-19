@@ -22,9 +22,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('usuario', UsersController::class);
 Route::resource('ordem', OrdensController::class);
 
+//Rotas reponsáveis pelo envio de e-mail
+Route::get('/enviarEmail', [EmailController::class, 'email']);
 Route::post('/enviarEmail', [App\Http\Controllers\EmailController::class, 'email']);
-Route::get('/email', [App\Http\Controllers\EmailController::class, 'index']);
-Route::post('/email', [App\Http\Controllers\EmailController::class, 'index']);
+
+Route::get('/email', [App\Http\Controllers\EmailController::class, 'index']);  //retorna a tela de e-mail enviado com sucesso.
 
 Route::post('/filtro', [App\Http\Controllers\OrdensController::class, 'filtroOrdens'])->name('filtro');
 Route::get('/filtro', [App\Http\Controllers\OrdensController::class, 'filtroOrdens'])->name('filtro'); 

@@ -57,11 +57,13 @@
                         <div class="card ordemdiv">        
                             <!-- Verifica se a ordem ja está pronta. Se o status for diferente de pronto ele exibe o campo enviar mensagem/email -->                    
                             @if($ordem->status_ordem != 'Pronto')
+                            <!-- Formulario de envio de E-mail/Mensagem Contato -->
                             {!! Form::open(['method'=>'POST', 'url'=>'enviarEmail']) !!}                                
                                 <div class="card py-2 col-md-12 ordemdiv">
                                     <h4><strong> Em caso de dúvida envie uma mensagem:</strong></h4>
                                     <input hidden name="id" value={{ $ordem->id }}>
-                                    <input hidden name="nome" value={{ $ordem->nome }}>
+                                    <input hidden name="protocolo" value={{ $ordem->protocolo }}>
+                                    <input hidden name="nome" value={{ $ordem->nome }}>                                    
                                     {!! Form::textarea('mensagem', null, ['class'=>'form-control', 'required', 'placeholder'=>'Mensagem', 'rows'=>3]) !!}
                                     {!! csrf_field() !!}
                                 </div>

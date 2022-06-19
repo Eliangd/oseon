@@ -87,11 +87,11 @@
         <main class="py-4">
             @yield('content')
         </main>
-        <!--
-        <div class="footer">
+        
+        <div class="footer text-white">
             Todos os direitos reservados &copy; 2022
         </div>
-        -->
+        
     </div>
 </body>
 </html>
