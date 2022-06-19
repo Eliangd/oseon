@@ -51,7 +51,7 @@
             @yield('content')
         </main class="py-4">
         
-        <div class="footer text-white">
+        <div class="footer text-white text-center navbar-fixed-bottom">
             Todos os direitos reservados &copy; 2022
         </div>
         
