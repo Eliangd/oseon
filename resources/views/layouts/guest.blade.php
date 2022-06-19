@@ -50,7 +50,7 @@
         <main>
             @yield('content')
         </main class="py-4"> 
-        <div class="text-white" style="width: 100%; height: 40px; position: relative; bottom: 0; left: 0; text-align: center;">
+        <div class="text-white text-center" style="width: 100%; height: 40px; position: relative; bottom: 0; left: 0;">
             Todos os direitos reservados &copy; 2022
         </div>
     </div>
