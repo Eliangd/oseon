@@ -22,7 +22,8 @@ class EnvioEmail extends Mailable
      */
     public function __construct($id, $protocolo, $nome, $mensagem)
     {
-        $this->id = $id;
+        //recebe os dados da funcão e encaminha para a view para depois enviar o e-mail.
+        $this->id = $id;       
         $this->protocolo = $protocolo;
         $this->nome = $nome;
         $this->mensagem = $mensagem;
@@ -35,6 +36,6 @@ class EnvioEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.contato');
+        return $this->view('emails.contato'); //retorna os dados para a view email.contato.
     }
 }
