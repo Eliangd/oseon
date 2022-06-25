@@ -8,7 +8,8 @@
                 <div class="card-header text-center">
                     <h4>Lista de Ordens:</h4>
                 </div>
-                <div class="card-body">
+                <div class="card-body">     
+                                   
                 <!-- Exibe mensagem de sucesso -->
                 @if(Session::has('mensagem_sucesso'))
                     <div class="alert alert-success" id="alert"> 
