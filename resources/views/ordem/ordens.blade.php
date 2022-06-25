@@ -35,8 +35,9 @@
                         </select>
                         <input type="text" name="codigo" class="form-control mr-1" placeholder="Código">   
                         <input type="text" name="protocolo" class="form-control mr-1" placeholder="Protocolo"> 
-                        <input type="text" name="nome" size="60" class="form-control mr-1" placeholder="Nome">
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Pesquisar</button>
+                        <input type="text" name="nome" size="45" class="form-control mr-1" placeholder="Nome">
+                        <button type="submit" class="btn btn-primary mr-1"><i class="fas fa-search"></i> Pesquisar</button>        
+                        <button type="button" class="btn btn-success" onClick="window.location.reload()"><i class="fas fa-redo"></i> Atualizar Ordens</button>  
                     </form>
                 </div>
                 

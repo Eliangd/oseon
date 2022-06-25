@@ -18,7 +18,7 @@ class OrdensController extends Controller
     public function index(Request $request)
     {
         $ordens = Ordem::all(); //busca todas as ordens no banco.
-        $ordens = Ordem::sortable()->paginate(10); //confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
+        $ordens = Ordem::sortable()->paginate(20); //confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
         Paginator::useBootstrap(); //utilização do paginator.
 
 
@@ -33,31 +33,31 @@ class OrdensController extends Controller
         $filtroStatus = request('status_ordem'); //variavel recebe o valor da busca informado no status_ordem.
         
         $ordens = Ordem::all(); //busca todas as ordens no banco.
-        $ordens = Ordem::sortable()->paginate(10); ////confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
+        $ordens = Ordem::sortable()->paginate(15); ////confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
         Paginator::useBootstrap(); //utilização do paginator.
 
         if($filtroStatus){
             $ordens = Ordem::where([  //verifica se existe a ordem com o valor informado na busca status.
                 ['status_ordem', 'like', $filtroStatus] //seleciona as ordens que tem o status igual ao valor informado na busca.
-            ])->sortable()->paginate(10);  //confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
+            ])->sortable()->paginate(15);  //confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
         }
 
         if($filtroProtocolo){
             $ordens = Ordem::where([ //verifica se existe a ordem com o valor informado na busca protocolo.
                 ['protocolo', 'like', $filtroProtocolo] //seleciona as ordens que tem o protocolo igual ao valor informado na busca.
-            ])->sortable()->paginate(10); //confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
+            ])->sortable()->paginate(15); //confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
         }
 
         if($filtroCodigo){
             $ordens = Ordem::where([ //verifica se existe a ordem com o valor informado na busca codigo.
                 ['ords_codigo', 'like', $filtroCodigo] //seleciona as ordens que tem o protocolo igual ao valor informado na busca codigo.
-            ])->sortable()->paginate(10); //confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
+            ])->sortable()->paginate(15); //confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
         }
 
         if($filtroNome){
             $ordens = Ordem::where([ //verifica se existe a ordem com o valor informado na busca nome.
                 ['nome', 'like', "%$filtroNome%"] //seleciona as ordens que contenha caracteres semelhantes ao valor informado na busca nome, não necessariamente precisa ser exatamente igual.
-            ])->sortable()->paginate(10); //confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
+            ])->sortable()->paginate(15); //confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
         } 
 
         return view('ordem.ordens', compact('ordens')); //retorna a view ordens com as informações das ordens filtradas.

@@ -19,7 +19,7 @@ class UsersController extends Controller
     
     public function index()
     {        
-        $usuarios = User::sortable()->paginate(10); //confirmação do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
+        $usuarios = User::sortable()->paginate(15); //confirmação do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
         Paginator::useBootstrap(); //utilização do paginator.
         return view('usuario.lista', compact('usuarios')); //retorna a tela com os usuários do sistema.
     }
