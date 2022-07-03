@@ -51,7 +51,7 @@
                                     <th>@sortablelink('id')</th>
                                     <th>@sortablelink('protocolo')</th>
                                     <th>@sortablelink('nome')</th>                                    
-                                    <th>CPF / CNPJ</th>
+                                    <th>Data Entrada</th>
                                     <th>@sortablelink('status_ordem')</th>
                                     <th>Opções</th>
                                 </tr>
@@ -62,7 +62,7 @@
                                         <td>{{ $ordem->id }}</td>
                                         <td>{{ $ordem->protocolo }}</td>
                                         <td>{{ $ordem->nome }}</td>
-                                        <td>{{ $ordem->cpf }}</td>
+                                        <td>{{ $ordem->data_abertura }}</td>
                                         <td>{{ $ordem->status_ordem }}</td>                            
                                         <td>                    
                                             <form style=display:inline action="search" method="GET" class="form form-inline">

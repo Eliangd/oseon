@@ -31,6 +31,7 @@ class OrdensController extends Controller
         $filtroCodigo = request('codigo');       //variavel recebe o valor da busca informado no filtro codigo.
         $filtroNome = request('nome');           //variavel recebe o valor da busca informado no filtro nome.
         $filtroStatus = request('status_ordem'); //variavel recebe o valor da busca informado no status_ordem.
+
         
         $ordens = Ordem::all(); //busca todas as ordens no banco.
         $ordens = Ordem::sortable()->paginate(15); ////confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.

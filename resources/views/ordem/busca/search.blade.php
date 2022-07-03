@@ -18,41 +18,59 @@
             <div class="card py-4 ordemdiv">                
                 <div class="text-center">
                     <h1>Ordem de Serviço</h1>
-                </div>
+                </div>                
                 @foreach ($ordens as $ordem)
                     <div class="card-body">
-                        <div style="display: flex" class="card py-2 ordemdiv">
-                            <div class="col">
-                                <h4><strong> Código: </strong> {{ $ordem->id }}</h4>
+                        <div class='contornoDiv' style='display:flex'>
+                            <div class="col-6">
+                                <img class="imgLoja" src="imagens/magrao.png" height="auto" width="50%">
                             </div>
-                            <div class="col">
-                                <h4><strong> Protocolo: </strong> {{ $ordem->protocolo }}</h4>
+                            <div class="col-6" style="justify-content:flex-start">
+                                <br />
+                                <h3><strong> Magrão Informática </strong></h3>
+                                <h4><strong >CNPJ: 08.336.377/0001-28 </strong></h4>
+                                <h4><strong >Endereço: Rua Mauá, 2850 </strong></h4>
+                                <h4><strong >Bairro: Centro </strong></h4>
+                                <h4><strong >Cidade: Realeza-PR </strong></h4>                        
+                                <h4><strong >CEP: 85770-000 </strong></h4>
+                                <h4><strong >Telefone: (46) 3543-3992 </strong></h4>
+                                <h4><strong >Email: contato.magraoinfo@gmail.com </strong></h4>
                             </div>
-                            <div class="col">
-                                <h4><strong> Nome: </strong> {{ $ordem->nome }}</h4>
-                            </div>
-                            <div class="col">
-                                <h4><strong> Status: </strong> {{ $ordem->status_ordem }}</h4>
-                            </div>                                                    
-                            <div class="col">
-                                <h4><strong> Equipamento: </strong> {{ $ordem->equipamento }}</h4>
-                            </div>
-                            <div class="col">
-                                <h4><strong> Modelo: </strong> {{ $ordem->modelo }}</h4>
-                            </div>
-                            <div class="col">
-                                <h4><strong> Acessórios: </strong> {{ $ordem->acessorios }}</h4>
-                            </div>
-                            <div class="col">
-                                <h4><strong> Defeito: </strong> {{ $ordem->defeito }}</h4>
-                            </div>
-                        </div>                        
-                        <div class="card py-2 ordemdiv">
-                            <div class="col-md-12">
-                                <h4><strong> Relatório Técnico:</strong></h4>
-                                <h5>{{ $ordem->relatorio }}</h5>
-                            </div>
-                        </div>   
+                        </div>
+                        <br />
+                        <div class="contornoDiv">
+                            <div style="display: flex" class="card py-1 ordemdiv">
+                            <h2 class="text-center">
+                                Informações Ordem
+                            </h2>
+                            <br />
+                                <div style='display:flex'>
+                                    <div class="col-6" style="justify-content:flex-start">
+                                        <h4><strong> O.S. Nº: </strong> {{ $ordem->id }}</h4>
+                                        <h4><strong> Protocolo: </strong> {{ $ordem->protocolo }}</h4>
+                                        <h4><strong> Cliente: </strong> {{ $ordem->nome }}</h4>
+                                        <h4><strong> Status: </strong> {{ $ordem->status_ordem }}</h4>
+                                    </div>                                                
+                                    <div class="col-6" style="justify-content:flex-start">
+                                        <h4><strong> Equipamento: </strong> {{ $ordem->equipamento }}</h4>
+                                        <h4><strong> Modelo: </strong> {{ $ordem->modelo }}</h4>
+                                        <h4><strong> Acessórios: </strong> {{ $ordem->acessorios }}</h4>                                    
+                                        <h4><strong> Data Abertura: </strong> {{ $ordem->data_abertura }}</h4>
+                                    </div>
+                                </div>
+                                
+                                <br>
+                                <div class="col contornoDiv2">
+                                    <h4><strong> Defeito: </strong> {{ $ordem->defeito }}</h4>
+                                </div>
+                            </div>                        
+                            <div class="card py-2 ordemdiv">
+                                <div class="col-md-12 contornoDiv2">
+                                    <h4><strong> Relatório Técnico:</strong></h4>
+                                    <h5>{{ $ordem->relatorio }}</h5>
+                                </div>
+                            </div>   
+                        </div>
                         <br />
                         <div class="card ordemdiv">        
                             <!-- Verifica se a ordem ja está pronta. Se o status for diferente de pronto ele exibe o campo enviar mensagem/email -->                    

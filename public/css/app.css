@@ -21578,6 +21578,20 @@ readers do not read off random characters that represent icons */
   border: 6px solid DarkSlateGray;
 }
 
+/* Contorno Div -> View Search */
+.contornoDiv{
+  border: 6px solid Gray;
+}
+
+
+/* Logo Magrão */
+.imgLoja{
+  border-radius: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Configurações Módulos do Sistema */
 .stylediv{
   border-radius: 5%;
