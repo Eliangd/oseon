@@ -18,7 +18,7 @@ class OrdensController extends Controller
     public function index(Request $request)
     {
         $ordens = Ordem::all(); //busca todas as ordens no banco.
-        $ordens = Ordem::sortable()->paginate(20); //confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
+        $ordens = Ordem::sortable()->paginate(15); //confiração do paginate para exibir apenas 10 itens por página, e o sortable ira fazer a ordenação.
         Paginator::useBootstrap(); //utilização do paginator.
 
 
